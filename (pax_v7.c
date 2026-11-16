@@ -1,6 +1,10 @@
 /* ==========================================================
  * PAX v7.0 - OMNI-KERNEL & ZERO-MALLOC ARENA RUNTIME
  * Architecture: Static 64MB Memory Arena | Zero-GC Execution
+ * 
+ * QUICK START:
+ * Compile: gcc -O3 pax_v7.c -o pax
+ * Run:     ./pax run examples/core.pax
  * ========================================================== */
 
 #include <stdio.h>
