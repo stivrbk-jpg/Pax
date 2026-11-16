@@ -1,0 +1,29 @@
+# ==========================================================
+# PAX v6.0 - NATIVE WEB NODE & DASHBOARD
+# ==========================================================
+
+guard on
+
+Pax [
+    "=== INITIALIZING PAX WEB NODE ==="
+    "Binding directly to native sockets without runtime bloat"
+]
+
+active_connections = 42
+
+web on 9090 [
+    page "/" [
+        Pax [
+            "<html>"
+            "<head><title>Pax Sovereign Node</title></head>"
+            "<body style='background:#111; color:#00ffcc; font-family:monospace; padding:40px;'>"
+            "<h1>🏛️ Pax v6.0 Node Active</h1>"
+            "<p>Zero-GC Arena Memory Architecture running live.</p>"
+            "<p>Status: 100% Independent & Sovereign.</p>"
+            "</body>"
+            "</html>"
+        ]
+    ]
+]
+
+run
