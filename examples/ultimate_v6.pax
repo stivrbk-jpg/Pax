@@ -1,0 +1,32 @@
+# ==========================================================
+# PAX v6.0 - THE PURE BRACKET STANDARD []
+# ==========================================================
+
+guard on
+
+Pax [
+    "=== WELCOME TO PAX v6.0 ==="
+    "The 100% Sovereign Programming Language"
+    "Built for the Global Community"
+]
+
+score = 100
+
+fn boost [
+    score += 50
+    Pax [ "Score boosted to:" score ]
+]
+
+loop 2 times [
+    call boost
+]
+
+need score > 150
+
+web on 8080 [
+    page "/" [
+        Pax [ "<h1>Pax v6.0 Engine Active</h1><p>Arena Memory & Pax [] Output Unified.</p>" ]
+    ]
+]
+
+run
