@@ -1,0 +1,14 @@
+name: Pax Core CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Omni-Kernel
+        run: gcc -O3 pax_v7.c -o pax
+      - name: Test Core Execution
+        run: ./pax run examples/core.pax
+        
